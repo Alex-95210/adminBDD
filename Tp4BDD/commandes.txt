@@ -1,0 +1,22 @@
+docker-compose exec mysql bash
+mysql -u root -p
+enter password :password
+create database cours;
+use cours;
+create table matieres (nom varchar(24),nombre_de_cours int);
+insert into matieres (nom,nombre_de_cours) values("adminBDD",20);
+exit
+cd backups/
+mysqldump -u root --password=password cours > base.sql
+exit
+docker-compose exec maria bash
+mysql -u root -p
+enter password :password
+create database cours;
+exit
+cd backups/
+mysqldump -u root --password=password cours < base.sql
+
+
+
+

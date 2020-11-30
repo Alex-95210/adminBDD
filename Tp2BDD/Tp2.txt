@@ -10,6 +10,7 @@ CREATE USER 'event_manager'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON events TO 'event_manager'@'localhost';
 CREATE USER 'event_supervisor'@'localhost' IDENTIFIED BY 'password';
 GRANT SELECT PRIVILEGES ON events.public_events TO 'event_supervisor'@'localhost';
+FLUSH PRIVILEGES;
 mysql -u event_manager -p
 Enter password: password
 INSERT INTO public_events (event_date, event_name, event_age_requirement) VALUES (NOW(), "jean", 20);

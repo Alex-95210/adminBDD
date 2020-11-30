@@ -1,0 +1,2 @@
+mysql -u root -p < script1.sql
+mysql -u manager -p < script2.sql
