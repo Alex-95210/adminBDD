@@ -1,0 +1,2 @@
+docker build -f Dockerfile . -t tp2
+(à lancer depuis le fichier /Tp2Docker)

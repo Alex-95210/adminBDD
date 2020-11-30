@@ -1,0 +1,7 @@
+CREATE TABLE clients (
+prenom VARCHAR(255),
+nom VARCHAR(255),
+date_de_naissance date,
+code_postal int
+);
+INSERT INTO clients(prenom, nom,date_de_naissance,code_postal) VALUES ("chuck", "noris","1990-11-1","33800");
